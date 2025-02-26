@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const readData = () => {
     try {
-        const data = fs.readFileSync("./db.json");
+        const data = fs.readFileSync("./data/index_notificacions.json");
         return JSON.parse(data);
     } catch (error) {
         console.error(error);
@@ -16,7 +16,7 @@ const readData = () => {
 
 const writeData = (data) => {
     try {
-        fs.writeFileSync("./db.json", JSON.stringify(data));
+        fs.writeFileSync("./data/index_notificacions.json", JSON.stringify(data));
     } catch (error) {
         console.error(error);
     }

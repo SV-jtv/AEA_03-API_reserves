@@ -1,8 +1,8 @@
-GET http://localhost:3000/books
+GET http://localhost:3000/recursos
 
 ###
 
-GET http://localhost:3000/books/1
+GET http://localhost:3000/recursos/1
 
 ###
 
@@ -25,5 +25,3 @@ Content-Type: application/json
 }
 ###
 DELETE http://localhost:3000/books/3 HTTP/1.1
-
-

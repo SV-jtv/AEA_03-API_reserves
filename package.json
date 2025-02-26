@@ -1,9 +1,11 @@
 {
   "name": "aea_03-api_reserves",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index/index_recursos.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index/index_recursos.js"
   },
   "keywords": [],
   "author": "Saray Varela",
@@ -15,6 +17,9 @@
     "serve": "^14.2.4"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "serve": "^14.2.4"
   }
 }

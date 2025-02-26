@@ -7,7 +7,7 @@ app.use(bodyParser.json());
 
 const readData = () => {
     try {
-        const data = fs.readFileSync("./db.json");
+        const data = fs.readFileSync("../data/recursos.json");
         return JSON.parse(data);
     } catch (error) {
         console.error(error);
@@ -16,7 +16,7 @@ const readData = () => {
 
 const writeData = (data) => {
     try {
-        fs.writeFileSync("./db.json", JSON.stringify(data));
+        fs.writeFileSync("../data/recursos.json", JSON.stringify(data));
     } catch (error) {
         console.error(error);
     }
@@ -30,13 +30,13 @@ app.post("/recursos", (req, res) => {
     const body = req.body;
     //todo lo que viene en ...body se agrega al nuevo libro, 
     //los (...) es un operador de propagación y sirve para hacer una copia de la información original
-    const newBook = {
-        id: data.books.length + 1,
+    const newrecursIndex = {
+        id: data.recursos.length + 1,
         ...body,
     };
-    data.books.push(newBook);
+    data.recursos.push(newrecursIndex);
     writeData(data);
-    res.json(newBook);
+    res.json(newrecursIndex);
 });
 
 // Update recursos
@@ -44,13 +44,13 @@ app.put("/recursos/:id", (req, res) => {
     const data = readData();
     const body = req.body;
     const id = parseInt(req.params.id);
-    const bookIndex = data.books.findIndex((book) => book.id === id);
-    data.books[bookIndex] = {
-        ...data.books[bookIndex],
+    const recursIndexIndex = data.recursos.findIndex((recursIndex) => recursIndex.id === id);
+    data.recursos[recursIndexIndex] = {
+        ...data.recursos[recursIndexIndex],
         ...body,
     };
     writeData(data);
-    res.json({ message: "Book updated successfully" });
+    res.json({ message: "recursIndex updated successfully" });
 });
 
 // Get recursos
@@ -59,8 +59,8 @@ app.get("/recursos/:id", (req, res) => {
     //Extraiem l'id de l'url recordem que req es un objecte tipus requets
     // que conté l'atribut params i el podem consultar
     const id = parseInt(req.params.id);
-    const book = data.books.find((book) => book.id === id);
-    res.json(book);
+    const recursIndex = data.recursos.find((recursIndex) => recursIndex.id === id);
+    res.json(recursIndex);
 });
 
 // Delete recursos
@@ -68,12 +68,12 @@ app.get("/recursos/:id", (req, res) => {
 app.delete("/recursos/:id", (req, res) => {
     const data = readData();
     const id = parseInt(req.params.id);
-    const bookIndex = data.books.findIndex((book) => book.id === id);
-    //splice esborra a partir de bookIndex, el número de elements
+    const recursIndexIndex = data.recursos.findIndex((recursIndex) => recursIndex.id === id);
+    //splice esborra a partir de recursIndexIndex, el número de elements
     // que li indiqui al segon argument, en aquest cas 1
-    data.books.splice(bookIndex, 1);
+    data.recursos.splice(recursIndexIndex, 1);
     writeData(data);
-    res.json({ message: "Book deleted successfully" });
+    res.json({ message: "recursIndex deleted successfully" });
 });
 // ##################################################################################################################
 
