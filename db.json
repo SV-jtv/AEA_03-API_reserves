@@ -1,0 +1,97 @@
+{
+    "usuaris": [
+        {
+            "id": 1,
+            "nom": "usuari",
+            "correu": "usuari@gmail.com",
+            "contrasenya": "1234",
+            "rol": "client"
+        },
+        {
+            "id": 2,
+            "nom": "usuari",
+            "correu": "usuari@gmail.com",
+            "contrasenya": "1234",
+            "rol": "admin"
+        },
+        {
+            "id": 3,
+            "nom": "cata",
+            "correu": "cata@gmail.com",
+            "contrasenya": "1234",
+            "rol": "client"
+        }
+    ],
+    "recursos": [
+        {
+            "id": 1,
+            "nom": "recurs",
+            "tipus": "sala",
+            "estat": "disponible",
+            "ubicació": "C/ Aiguablava 4"
+        },
+        {
+            "id": 2,
+            "nom": "recurs",
+            "tipus": "vehicle",
+            "estat": "reservat",
+            "ubicació": "C/ Aiguablava 4"
+        },
+        {
+            "id": 3,
+            "nom": "recurs",
+            "tipus": "equipament",
+            "estat": "fora de serve",
+            "ubicació": "C/ Aiguablava 4"
+        }
+    ],
+    "reserves": [
+        {
+            "id": 1,
+            "data-hora_inici": "",
+            "data-hora_fin": "",
+            "estat": "activa",
+            "idUsuari": 1,
+            "idRecurs": 1
+        },
+        {
+            "id": 2,
+            "data-hora_inici": "",
+            "data-hora_fin": "",
+            "estat": "cancel·lada",
+            "idUsuari": 2,
+            "idRecurs": 2
+        },
+        {
+            "id": 3,
+            "data-hora_inici": "",
+            "data-hora_fin": "",
+            "estat": "completada",
+            "idUsuari": 3,
+            "idRecurs": 3
+        }
+    ],
+    "notificacions": [
+        {
+            "id": 1,
+            "tipus_accio": "",
+            "data-hora": "creació",
+            "detalls": "És una creació",
+            "idUsuari": 1
+        },
+        {
+            "id": 2,
+            "tipus_accio": "",
+            "data-hora": "modificació",
+            "detalls": "És una modificació",
+            "idUsuari": 2
+        },
+        {
+            "id": 3,
+            "tipus_accio": "",
+            "data-hora": "cancel·lació",
+            "detalls": "És una cancel·lació",
+            "idUsuari": 3
+        }
+    ]
+}

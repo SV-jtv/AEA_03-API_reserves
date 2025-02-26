@@ -1,0 +1,20 @@
+{
+  "name": "aea_03-api_reserves",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Saray Varela",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2",
+    "serve": "^14.2.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
