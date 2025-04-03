@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benvingut</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Gestió de Recursos per <%= user.name %>!</h1>
+        <h2><%- htmlMessage %></h2>
+    </header>
+    <main>
+        <section>
+            <h2>Llista de Recursos</h2>
+            <ul class="element-list">
+                <% data.recursos.forEach(recurs=> { %>
+                    <li class="element-item">
+                        <strong><%= recurs.id %></strong>
+                        <span>Nom: <%= recurs.nom %></span>
+                        <span>Tipus: <%= recurs.tipus %></span>
+                        <span>Estat: <%= recurs.estat %></span>
+                        <span>Ubicació: <%= recurs.ubicacio %></span>
+                    </li>
+                <% }) %>
+
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
