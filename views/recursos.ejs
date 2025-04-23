@@ -14,18 +14,24 @@
         <h2><%- htmlMessage %></h2>
     </header>
     <main>
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="/">Home</a></li>
+        </ul>
         <section>
             <h2>Llista de Recursos</h2>
             <ul class="element-list">
                 <% data.recursos.forEach(recurs=> { %>
                     <li class="element-item">
-                        <strong><%= recurs.id %></strong>
+                        <strong>
+                            <%= recurs.id %>
+                        </strong>
                         <span>Nom: <%= recurs.nom %></span>
                         <span>Tipus: <%= recurs.tipus %></span>
                         <span>Estat: <%= recurs.estat %></span>
                         <span>Ubicació: <%= recurs.ubicacio %></span>
                     </li>
-                <% }) %>
+                    <% }) %>
 
             </ul>
         </section>
