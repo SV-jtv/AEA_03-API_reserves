@@ -147,3 +147,6 @@ app.delete("/recursos/:id", (req, res) => {
 app.listen(3000, () => {
     console.log("Server listing on port 3000")
 });
+
+//npx kill-port 3000
+//para matar el proceso
